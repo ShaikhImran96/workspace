@@ -1,0 +1,34 @@
+<h1 class="text-center">Diposit</h1>
+<div *ngIf="successMsg" class="alert alert-success">
+
+    {{successMsg}}
+
+</div>
+<div *ngIf="errorMsg" class="alert alert-danger">
+
+    {{errorMsg}}
+
+</div>
+
+<div  class="col-md-8 offset-md-3" >
+<form (ngSubmit)="onSubmit()">
+
+
+ 
+    <div>
+
+        <label >Balance</label>
+        <input type="text" id="Balance" class="form-control" name="Balance" placeholder="Enter Balance"
+        [(ngModel)]="account.balance"/>
+    </div>
+
+    <br>
+    <div>
+        <button type="submit" class="btn btn-success">Submit</button>
+
+    </div>
+
+
+
+</form>
+</div>
